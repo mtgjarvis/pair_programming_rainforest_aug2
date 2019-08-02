@@ -19,5 +19,6 @@ from rainforest import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("index", views.index),
+    # path("index")
+    path("index/", views.index),
 ]

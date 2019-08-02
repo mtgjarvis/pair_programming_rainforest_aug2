@@ -4,6 +4,6 @@ from rainforest.models import Product, ProductForm
 
 
 def index(request):
-    products = Product.objects.all()
-    context = {"products": products}
+    product = Product.objects.all()
+    context = {"products": product}
     return render(request, "index.html", context)

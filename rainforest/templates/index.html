@@ -1,3 +1,17 @@
 {% block title %}
-    All Products
+    <h1>All Products</h1>
+{% endblock %}
+
+{% block content %}
+
+    <h2>List of Products</h2>
+
+        <ul>
+            {% for item in products %}
+            <li>
+                <a href="/index/{{ item.pk }}">{{ item.name }} {{ item.description }} {{ item.price }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+
 {% endblock %}
