@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from rainforest.models import Product, ProductForm
 
+def root(request):
+    return HttpResponseRedirect("index")
 
 def index(request):
     product = Product.objects.all()
