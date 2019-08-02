@@ -7,3 +7,8 @@ def index(request):
     product = Product.objects.all()
     context = {"products": product}
     return render(request, "index.html", context)
+
+def show(request, id):
+    product = Product.objects.get(pk=id)
+    context = {"product": product}
+    return render(request, "show.html", context)
